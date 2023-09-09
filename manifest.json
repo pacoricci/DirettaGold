@@ -1,5 +1,5 @@
 {
-    "description": "Indica i fastcode di GoldBet su diretta.it",
+    "description": "Shows the GoldBet fastcode for any match on diretta.it",
     "manifest_version": 2,
     "name": "DirettaGold",
     "version": "1.0",
@@ -16,7 +16,6 @@
                 "https://www.diretta.it/partita/*"
             ],
             "js": [
-                "jquery-3.7.1.min.js",
                 "direttagold.js"
             ]
         }
