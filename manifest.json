@@ -16,7 +16,8 @@
                 "https://www.diretta.it/partita/*"
             ],
             "js": [
-                "direttagold.js"
+                "direttagold.js",
+                "goldbet.js"
             ]
         }
     ]
