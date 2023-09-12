@@ -8,7 +8,8 @@
         "96": "icons/direttagold-96.png"
     },
     "permissions": [
-        "https://www.goldbet.it/scommesse/searchEvents/*"
+        "https://www.goldbet.it/scommesse/searchEvents/*",
+        "https://betting.sisal.it/api/cerca-palinsesto-sport/*"
     ],
     "content_scripts": [
         {
@@ -17,7 +18,8 @@
             ],
             "js": [
                 "direttagold.js",
-                "goldbet.js"
+                "goldbet.js",
+                "sisal.js"
             ]
         }
     ]

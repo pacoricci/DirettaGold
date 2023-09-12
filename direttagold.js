@@ -1,3 +1,26 @@
+function makeRequest(opts) {
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                resolve(xhr.response);
+            } else {
+                reject({
+                    status: xhr.status,
+                    statusText: xhr.statusText
+                });
+            }
+        };
+        xhr.onerror = function () {
+            reject({
+                status: xhr.status,
+                statusText: xhr.statusText
+            });
+        };
+        xhr.open(opts.method, opts.url);
+        xhr.send(opts.params);
+    });
+}
 /**
  * This function adds a CSS style to display the fastcode to the user 
  */
@@ -34,6 +57,7 @@ function init() {
             const firstTeam = aTeams[0].firstChild.textContent.toLowerCase();
             const secondTeam = aTeams[1].firstChild.textContent.toLowerCase();
             goldBet.firstCallback(firstTeam, secondTeam);
+            sisal.firstCallback(firstTeam, secondTeam);
         }
     }, 100);
 }
